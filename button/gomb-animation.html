@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gomb animation</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		body {
+			position: relative;
+		}
+
+		@keyframes animacio {
+			0% {
+				background-color: red;
+				left: 0px;
+				top: 0px;
+			}
+			20% {
+				background-color: orange;
+				color: white;
+				left: 5px;
+				top: 5px;
+			}
+			40% {
+				background-color: red;
+				color: white;
+				left: 0px;
+				top: 0px;
+			}
+			60% {
+				background-color: orange;
+				color: white;
+				left: 5px;
+				top: 5px;
+			}
+			80% {
+				background-color: red;
+				color: white;
+				left: 0px;
+				top: 0px;
+			}
+			100% {
+				background-color: orange;
+				left: 0px;
+				top: 0px;
+			}
+		}
+
+		button {
+			padding: 10px;
+			font-size: 20pt;
+			font-family: tahoma;
+			background-color: orange;
+			position: relative;
+			animation-name: animacio;
+			animation-duration: 0.5s;
+			animation-play-state: paused;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		
+		function indulj(melyik) {
+			document.getElementById(melyik).style.animationPlayState = 'running';
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<button id="gomb1" onclick="indulj('gomb1')">gomb1</button>
+	&nbsp;&nbsp;&nbsp;
+	<button id="gomb2" onclick="indulj('gomb2')">gomb2</button>
+	&nbsp;&nbsp;&nbsp;
+	<button id="gomb3" onclick="indulj('gomb3')">gomb3</button>
+
+</body>
+
+</html>
+
+
+
+
