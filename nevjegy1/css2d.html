@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>css 2d</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+
+			body {
+				position: relative;
+			}
+
+			@keyframes proba {
+				0% {
+					transform: rotate(0deg);
+					animation-timing-function: ease-in;
+				}
+				33% {
+					transform: rotate(-85deg) scale(0.5, 0.5);
+					background-color: #DEB887;
+					animation-timing-function: ease-out;
+				}
+				50% {
+					transform: rotate(-60deg) scale(0.9, 0.9);
+					background-color: #FAEBD7;
+					animation-timing-function: ease-in;
+				}
+				66% {
+					transform: rotate(-80deg) scale(0.6, 0.6);
+					background-color: #DEB887;
+					animation-timing-function: ease-out;
+				}
+				86% {
+					transform: rotate(-70deg) scale(0.8, 0.8);
+					background-color: #FAEBD7;
+					animation-timing-function: ease-in;
+				}
+				100% {
+					transform: rotate(-75deg) scale(0.7, 0.7);
+					background-color: #F4A460;
+					animation-timing-function: ease-out;
+				}
+			}
+			
+			div {
+				margin: 20px;
+				padding: 40px;
+				font-size: 30pt;
+				font-family: monospace;
+				border: 1px solid black;
+				text-align: center;
+				background-color: #F5F5DC;
+				width: 350px;
+				position: relative;
+				animation-name: proba;
+				animation-duration: 2s;
+				animation-fill-mode: forwards;
+				animation-play-state: paused;
+				transform-origin: 100% 0%;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+			
+			function indit() {
+				document.getElementById('tartalom').style.animationPlayState = 'running';
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="tartalom" onclick="indit()">
+			Szabó Zsolt
+			<br>
+			<i>webfejlesztő</i>
+			<br>
+		</div>
+
+	</body>
+
+</html>
