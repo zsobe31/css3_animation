@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>css 3d</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+
+			body {
+				position: relative;
+				perspective: 750px;
+				perspective-origin: 0% 0%;
+			}
+
+			@keyframes proba {
+				
+				100% {
+					transform: translateZ(-250px) scale3d(1.2, 1.2, 1.2) rotateX(25deg) rotateY(360deg);
+				}
+			}
+
+			#tartalom {
+				margin: 500px;
+				margin-top: 200px;
+				font-size: 20pt;
+				font-family: monospace;
+				border: 1px solid black;
+				border-radius: 5px;
+				text-align: center;
+				background-color: #F5F5DC;
+				width: 200px;
+				height: 300px;
+				position: relative;
+				animation-name: proba;
+				animation-duration: 2s;
+				animation-fill-mode: forwards;
+				animation-play-state: paused;
+				transform-origin: 50% 50%;
+				transform-style: preserve-3d;
+			}
+
+			.eleje {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				box-sizing: border-box;
+				background-color: #F5F5DC;
+				backface-visibility: hidden;
+			}
+			.hatulja {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				box-sizing: border-box;
+				background-color: #F5F5DC;
+				transform: rotateY(180deg);
+				backface-visibility: hidden;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+			
+			function indit() {
+				document.getElementById('tartalom').style.animationPlayState = 'running';
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+			<div id="tartalom" onclick="indit()">
+				<div class="eleje"><img src="eleje.jpg" style="width: 100%; height: 100%;"></div>
+				<div class="hatulja"><img src="hatulja.jpg" style="width: 100%; height: 100%;"></div>
+			</div>
+
+	</body>
+
+</html>
